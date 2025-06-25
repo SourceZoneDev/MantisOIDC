@@ -1,0 +1,7 @@
+<?php
+
+$s_plugin_MantisOIDC_title = 'Mantis ODIC';
+$s_plugin_MantisOIDC_save = '保存';
+$s_plugin_MantisOIDC_login_button_default = '登录';
+$s_plugin_MantisOIDC_seperator_text = '或';
+$s_plugin_MantisOIDC_user_not_available = '对不起，没有与提供的登录数据关联的账号。请联系<a href="mailto:%1$s" title="联系管理员。">管理员</a>';
