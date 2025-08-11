@@ -73,12 +73,19 @@
     auth_set_cookies( $user_id, false );
     auth_set_tokens( $user_id );
 
-    // Obtain the redicrect url
+    // Obtain the redirect url
     // Example: state=view.php?id=2222
     $redirect_url = '../../..';
 
     // add get-params if the user was about to access a certain page
     if(!empty($get_stash) && isset($get_stash["return"])) {
+
+        // some redirects (e.g. bug_report_page.php) are missing the leading slash
+        // add it if missing
+        if(substr($get_stash["return"], 0, 1) != '/') {
+            $redirect_url .= "/";
+        }
+
         $redirect_url .= $get_stash["return"];
     } else {
         $redirect_url .= "/index.php";
